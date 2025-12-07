@@ -44,7 +44,9 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 Скриншот:  
-![1 задание](https://github.com/mteplov/DDL/blob/main/img/4.png)
+![1 задание](https://github.com/mteplov/DDL/blob/main/img/1.png)
+![1 задание](https://github.com/mteplov/DDL/blob/main/img/2.png)
+![1 задание](https://github.com/mteplov/DDL/blob/main/img/3.png)
 
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
@@ -64,6 +66,13 @@ customer         | customer_id
 3.2. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+
+```sql 
+REVOKE INSERT, UPDATE, DELETE ON *.* FROM 'sys_temp'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+```
 Скриншот:  
-![3 задание](https://github.com/mteplov/DDL/blob/main/img/4.png)
+![3 задание](https://github.com/mteplov/DDL/blob/main/img/5.png)
+![3 задание](https://github.com/mteplov/DDL/blob/main/img/6.png)
 
